@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Generic Stock </title>
+    <style>
+                        .logo img {position: absolute; width: 60%; height: 40%; top: 0%; right: 19%;}
+			a {color: black; text-decoration: none;}
+            h1 {position: absolute; width: 100%; right: 0%; bottom: 50%; text-align:center;}
+			input {border: 1px solid black; height: 20px; width: 50%;}
+			.user {position: absolute; right: -5%; bottom: 40%; width: 75%;}
+			.password {position: absolute; right: -5%; bottom: 30%; width: 75%;}
+			.register {position: absolute; right: 33%; bottom: 25%}
+			.cancel {position: absolute; right: 66%; bottom: 25%}
+    </style>
+</head>
+<body>
+    <div class='logo'>
+        <img src='images/GSL.png'>
+    </div>
+    <h1><a href='frontPage.html'>GENERIC STOCK</a></h1>
+    <div class='user'>
+        <h2>Username:</h2>
+        <input id='user' type='text'>
+    </div>
+    <div class='password'>
+        <h2>Password:</h2>
+        <input id='password' type='password'>
+    </div>
+    <button type='button' id='register' class='register'>Register</button>
+    <button type='button' class='cancel' onclick="window.location.href='frontPage.html';">Cancel</button>
+    <script src='js/register.js'></script>
+</body>
+</html>

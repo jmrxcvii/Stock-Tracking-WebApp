@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+	<head>
+        <title> Generic Stock </title>
+        <style>
+            h1 {position: absolute; width: 100%; right: 0%; bottom: 85%; text-align:center;}
+            a {color: black; text-decoration: none;}
+            .plot1 {position: absolute; left: 35%; bottom: 45%; max-height:900px; max-width:600px;}
+            .plot2 {position: absolute; left: 35%; bottom: 5%; max-height:900px; max-width:600px;}
+            .stock1 {position: absolute; width: 100%; right: 25%; bottom: 75%; text-align: center;}
+            .stock2 {position: absolute; width: 100%; right: 25%; bottom: 35%; text-align: center;}
+            .menuButton {background-color: #34a4eb; color: white; padding: 16px; font-size: 16px; border: none; cursor: pointer;}
+            .menu {position: relative; display: inline-block;}
+            .menuContent {display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;}
+            .menuContent a {color: black; padding: 12px 16px; text-decoration: none; display: block;}
+            .menuContent a:hover {background-color: #f1f1f1}
+            .menu:hover .menuContent {display: block;}
+            .menu:hover .menuButton {background-color: #3493eb;}   
+        </style>
+    </head>
+    <body>
+        <div class="menu">
+            <button class="menuButton">Menu</button>
+            <div class="menuContent" id="menu">
+                    <a href="frontPageLogin.html"> Home </a>
+                    <a href="frontPage.html"> Logout </a>
+		    <a href="savedList.html"> Saved List </a>
+            </div>
+    </div>
+    <h1 id="page"><a href='frontPageLogin.html'>  GENERIC STOCK </a> </h1>
+    <h2 id="stock1" class="stock1"> Stock One </h2>
+    <h2 id="stock2" class="stock2"> Stock Two </h2>
+    <canvas id="myChart1" class='plot1'></canvas>
+    <canvas id="myChart2" class='plot2'></canvas>
+    <script src='js/comparePage.js'></script>
+    </body>
+</html>

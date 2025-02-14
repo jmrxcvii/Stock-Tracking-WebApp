@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+        <head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+                <title id = 'title'> Generic Stock - *stock name* </title>
+                <style>
+                        h1 {position: absolute; width: 100%; right: 0%; top: 5%; text-align:center;}
+                        h1 a {color: black; text-decoration: none;}
+                        h2 {position: absolute; width: 100%; left: 21%; top: 25%; text-align:left;}
+                        th {border: 1px solid black; background-color: #D2CCCB;}
+                        td {border: 1px solid black; text-align: center;}
+			.save {position: absolute; top: 29%; right: 61%;}
+			.plot {position: absolute; left: 50%; top: 33%; max-height:900px; max-width:600px;}
+                        .stockTable {position: absolute; height: 40%; width: 20%; left: 20%; top: 33%; border-spacing: 0px; border: 1px solid black;}
+                        .menuButton {background-color: #34a4eb; color: white; padding: 16px; font-size: 16px; border: none; cursor: pointer;}
+                        .menu {position: relative; display: inline-block;}
+                        .menuContent {display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;}
+                        .menuContent a {color: black; padding: 12px 16px; text-decoration: none; display: block;}
+                        .menuContent a:hover {background-color: #f1f1f1}
+                        .menu:hover .menuContent {display: block;}
+                        .menu:hover .menuButton {background-color: #3493eb;}
+                </style>
+        </head>
+        <body>
+                <div class="menu">
+                        <button class="menuButton">Menu</button>
+                        <div id='menu' class="menuContent">
+                                <a href="frontPageLogin.html"> Home </a>
+                                <a href="frontPage.html"> Logout </a>
+                                <a href="savedList.html"> Saved List </a>
+                        </div>
+                </div>
+                <h1 id='page'><a> GENERIC STOCK </a></h1>
+                <h2 id = 'name'> Stock Name </h2>
+                <table class = 'stockTable'>
+                        <tr>
+                                <th colspan = 2> Info </th>
+                        </tr>
+                        <tr>
+                                <td> Symbol </td>
+                                <td id = 'symbol'> DATA </td>
+                        </tr>
+                        <tr>
+                                <td> Current Price </td>
+                                <td id = 'cPrice'> DATA </td>
+                        </tr>
+                        <tr>
+                                <td> Yesterday Price </td>
+                                <td id = 'yPrice'> DATA </td>
+                        </tr>
+                        <tr>
+                                <td> Price Difference </td>
+                                <td id = 'pDiff'> DATA </td>
+                        </tr>
+                </table>
+		<button type="button" id='save' class='save'>Save Stock</button>
+		<canvas id="myChart" class='plot'></canvas>
+                <script src='js/stockPageLogin.js'> </script>
+        </body>
+</html>

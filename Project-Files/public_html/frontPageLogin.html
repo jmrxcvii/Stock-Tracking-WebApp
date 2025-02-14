@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title> Generic Stock </title>
+                <style>
+                        input {width: 50%; height: 25px; border: 1px solid black;}
+                        .logo img {position: absolute; width: 60%; height: 40%; top: 0%; right: 19%;}
+                        .search {position: absolute; width: 100%; right: 0%; bottom: 50%; text-align:center;}
+                        .results {position: absolute; right: 35%; top: 52%; width: 30%; height: 40%; text-align: center; overflow: auto;}
+                        .results table {width: 100%;}
+                        .results a {color: black; text-decoration: none; font-size: 35px;}
+                        .results tr:hover {background-color: #f1f1f1}
+                        .menuButton {background-color: #34a4eb; color: white; padding: 16px; font-size: 16px; border: none;
+                                        cursor: pointer;}
+                        .menu {position: relative; display: inline-block;}
+                        .menuContent {display: none; position: absolute; background-color: #f9f9f9; min-width: 160px;
+                                                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;}
+                        .menuContent a {color: black; padding: 12px 16px; text-decoration: none; display: block;}
+                        .menuContent a:hover {background-color: #f1f1f1}
+                        .menu:hover .menuContent {display: block;}
+                        .menu:hover .menuButton {background-color: #3493eb;}
+                </style>
+        </head>
+        <body>
+                <div class="menu">
+                        <button class="menuButton">Menu</button>
+                        <div class="menuContent" id="menu">
+                                <a href="frontPage.html"> Logout </a>
+                                <a href="savedList.html"> Saved List </a>
+                        </div>
+                </div>
+                <div class='logo'>
+                        <img src='images/GSL.png'>
+                </div>
+                <div class='search'>
+                        <h1> GENERIC STOCK </h1>
+                        <input type='text' id='sBar' value=' Search here!'>
+                </div>
+
+                <div class='results'>
+                        <table id = 'results'></table>
+                </div>
+                <script src='js/searchBarLogin.js'> </script>
+        </body>
+</html>
